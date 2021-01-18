@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><a href="{% url 'image list' %}">Назад к списку</a></p>
+<br><big>Новое изображение</big>
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+   {{ form.as_p }}
+    {% if fill %}
+    <br>Ошибка<br>
+    {% endif %}
+  <button type="submit">Отправить</button>
+</form>
+
+
+
+</body>
+</html>
