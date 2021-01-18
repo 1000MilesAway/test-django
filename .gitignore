@@ -5,4 +5,5 @@
 **.pyc
 /venv/
 /DjangoApi/static
-/sellers/device_assignment_frontend/node_modules
+/media/pictures/
+/media/resized_pictures/
