@@ -5,4 +5,5 @@
 **.pyc
 /venv/
 /DjangoApi/static
-/media/
+/media/pictures/*
+/media/resized_pictures/*
