@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Изображения</title>
+</head>
+<body>
+
+    <h2>Список изображений</h2>
+    <ul>
+        {% if object_list %}
+            {% for image in object_list %}
+            <li><a href="{% url 'resize image' image.id %}"><img src={{ image.img.url }}></a>
+            {% endfor %}
+        {% else %}
+            Нет доступных изображений
+        {% endif %}
+                <br>
+        <a href="{% url 'add image' %}">Добавить изображение</a>
+    </ul>
+
+</body>
+</html>

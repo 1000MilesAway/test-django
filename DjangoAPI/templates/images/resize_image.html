@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Изменение размера</title>
+</head>
+<body>
+<p><a href="{% url 'image list' %}">Назад к списку</a></p>
+<big>{{name}}</big>
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+   {{ form.as_p }}
+  <button type="submit">Отправить</button>
+</form>
+
+<img src={{ image.rszdimg.url }}>
+
+</body>
+</html>
